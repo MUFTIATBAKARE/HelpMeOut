@@ -22,11 +22,9 @@ function RecordingReady() {
       {modal && (
         <div className="modal-container">
           <span className="modal save">
-            <Image
-              className="modal_image close"
-              src={Close}
-              onClick={closeModal}
-            />
+            <span className="modal_image close" onClick={closeModal}>
+              <Image src={Close} className="modal_image close" />
+            </span>
             <span className="modal_content">
               <Image className="modal_imagee" src={Success} />
               <SmallText
