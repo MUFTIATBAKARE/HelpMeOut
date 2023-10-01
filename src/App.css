@@ -276,6 +276,7 @@ a:-webkit-any-link {
 }
 .white {
   background-color: #fff;
+  padding: 8px;
 }
 .blue {
   background-color: #120b48;
