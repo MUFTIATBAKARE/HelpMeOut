@@ -296,8 +296,8 @@ a:-webkit-any-link {
   margin: 0;
 }
 
-.divider::before,
-.divider::after {
+.divide::before,
+.divide::after {
   flex: 1;
   content: "";
   padding: 3px;
