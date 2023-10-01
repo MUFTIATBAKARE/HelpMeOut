@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ColoredLogo from "../assets/ColoredLogo.svg";
 import Button from "../components/Button";
 import Image from "../components/Image";
@@ -7,7 +8,9 @@ import SmallText from "../components/SmallText";
 function SignUp() {
   return (
     <div className="signup_container">
-      <Image className="logo" src={ColoredLogo} />
+      <Link to="/home">
+        <Image className="logo" src={ColoredLogo} />
+      </Link>
       <span className="signup_content">
         <span>
           <LargeText className="signup_main_text" text="Log in or Sign up" />
@@ -43,7 +46,9 @@ function SignUp() {
             placeholder="Enter your Password"
           />
         </div>
+        <Link to="/repository">
         <Button text="Sign Up" ext_btn="signup_box blue" />
+        </Link>
       </span>
     </div>
   );

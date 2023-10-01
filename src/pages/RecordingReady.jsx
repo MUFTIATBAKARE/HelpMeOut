@@ -15,45 +15,54 @@ function RecordingReady() {
     setModal(true);
   };
   return (
-    <div>
+    <div className="recording_container">
       {modal && (
         <div className="modal-container">
           <span className="modal save">
-            <Image className="video_image" src={Close} />
-            <span>
-              <Image className="video_image" src={Success} />
+            <Image className="modal_image close" src={Close} />
+            <span className="modal_content">
+              <Image className="modal_imagee" src={Success} />
               <SmallText
-                className="save_video_body_text"
-                text="To ensure the availability and privacy of your video, we recommend saving it to your account. "
+                className="save_video_body_text2"
+                text="Your video link has been sent to johnmark@gmail.com "
               />
-              <span>
+              <div className="video_subcontent">
                 <SmallText
-                  className="save_video_body_text"
-                  text="To ensure the availability and privacy of your video, we recommend saving it to your account. "
+                  className="save_video_text"
+                  text="Would you need to view this video later? Save to your account now!"
                 />
-                <Button text="Save Video" ext_btn="save_video_btn2" />
-                <SmallText
-                  className="save_video_body_text"
-                  text="Don’t have an account?"
+                <Button
+                  text="Save Video"
+                  ext_btn="save_video_btn2"
+                  onClick={handleClick}
                 />
-                <Link>
+                <span className="creat_account_container">
                   <SmallText
-                    className="save_video_body_text"
-                    text="Create account"
+                    className="save_video_body_subtext"
+                    text="Don’t have an account?"
                   />
-                </Link>
-              </span>
+                  <Link to="/signup">
+                    <SmallText
+                      className="save_video_body_subtext"
+                      text="Create account"
+                    />
+                  </Link>
+                </span>
+              </div>
             </span>
           </span>
           <span className="overlay"></span>
         </div>
       )}
       <NavBar />
-      <span>
+      <span className="video_container">
         <VideoText />
-        <video></video>
+        <span>
+          <p>Video goes here</p>
+          <video></video>
+        </span>
       </span>
-      <div>
+      <div className="video_subcontent">
         <SmallText
           className="save_video_body_text"
           text="To ensure the availability and privacy of your video, we recommend saving it to your account. "
@@ -63,13 +72,18 @@ function RecordingReady() {
           ext_btn="save_video_btn2"
           onClick={handleClick}
         />
-        <SmallText
-          className="save_video_body_text"
-          text="Don’t have an account?"
-        />
-        <Link>
-          <SmallText className="save_video_body_text" text="Create account" />
-        </Link>
+        <span className="creat_account_container">
+          <SmallText
+            className="save_video_body_subtext"
+            text="Don’t have an account?"
+          />
+          <Link to="/signup">
+            <SmallText
+              className="save_video_body_subtext"
+              text="Create account"
+            />
+          </Link>
+        </span>
       </div>
       <Footer />
     </div>

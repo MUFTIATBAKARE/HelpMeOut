@@ -3,14 +3,16 @@ import "./App.css";
 import LandingPage from "./pages/LandingPage";
 import SignUp from "./pages/SignUp";
 import RecordingReady from "./pages/RecordingReady";
+import VideoRepository from "./pages/VideoRepository";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<RecordingReady />} />
+        <Route path="/home" element={<LandingPage />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/record" element={<RecordingReady />} />
+        <Route path="/repository" element={<VideoRepository />} />
       </Routes>
     </>
   );

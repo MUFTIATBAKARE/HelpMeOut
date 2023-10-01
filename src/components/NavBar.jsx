@@ -5,7 +5,9 @@ import Image from "./Image";
 function NavBar() {
   return (
     <div className="nav_bar_container">
-      <Image className="logo" src={ColoredLogo} />
+      <Link to="/home">
+        <Image className="logo" src={ColoredLogo} />
+      </Link>
       <div className="nav_bar_text">
         <a href="#features" className="nav_link">
           <h3>Features</h3>

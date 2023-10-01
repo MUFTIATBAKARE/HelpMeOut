@@ -8,21 +8,39 @@ function VideoText() {
   return (
     <div>
       <LargeText className="video_main_text" text="Your video is ready!" />
-      <label>Name</label>
-      <SmallText className="video_body_text" text="Untitled_Video_20232509" />
-      <Image className="video_image" src={Edit} />
-      <input type="text" placeholder="enter email of receiver" />
-      <Button text="Send" ext_btn="video_btn" />
+      <span className="video_edit_container">
+        <label>Name</label>
+        <span className="video_edit_content">
+          <SmallText
+            className="video_body_text"
+            text="Untitled_Video_20232509"
+          />
+          <Image className="video_image" src={Edit} />
+        </span>
+      </span>
+      <span className="send_container">
+        <input
+          type="text"
+          placeholder="enter email of receiver"
+          className="signup_box send"
+        />
+        <Button text="Send" ext_btn="send_btn" />
+      </span>
       <SmallText className="video_body_text" text="Video Url" />
-      <input
-        type="text"
-        placeholder="https://www.helpmeout/Untitled_Video_20232509"
-      />
-      <Button text="Copy" ext_btn="video_btn2" />
+      <span className="send_container">
+        <input
+          type="text"
+          placeholder="https://www.helpmeout/Untitled_Video_20232509"
+          className="signup_box send"
+        />
+        <Button text="Copy" ext_btn="send_btn copy" />
+      </span>
       <SmallText className="video_body_text" text="Share your video " />
-      <Button text="Facebook" ext_btn="video_btn2" />
-      <Button text="WhatsApp" ext_btn="video_btn2" />
-      <Button text="Telegram" ext_btn="video_btn2" />
+      <span className="share_video_btn">
+        <Button text="Facebook" ext_btn="video_btn facebook2" />
+        <Button text="WhatsApp" ext_btn="video_btn whatsapp" />
+        <Button text="Telegram" ext_btn="video_btn telegram" />
+      </span>
     </div>
   );
 }
