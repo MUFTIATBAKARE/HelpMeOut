@@ -26,7 +26,7 @@ function SignUp() {
           type="submit"
           value="Continue with Facebook"
         />
-        <div className="divider">or</div>
+        <div className="divide">or</div>
         <div className="form_field">
           <label>Email</label>
           <input
