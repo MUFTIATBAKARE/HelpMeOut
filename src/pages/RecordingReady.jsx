@@ -11,15 +11,22 @@ import Image from "../components/Image";
 
 function RecordingReady() {
   const [modal, setModal] = useState(false);
-  const handleClick = () => {
+  const openModal = () => {
     setModal(true);
+  };
+  const closeModal = () => {
+    setModal(false);
   };
   return (
     <div className="recording_container">
       {modal && (
         <div className="modal-container">
           <span className="modal save">
-            <Image className="modal_image close" src={Close} />
+            <Image
+              className="modal_image close"
+              src={Close}
+              onClick={closeModal}
+            />
             <span className="modal_content">
               <Image className="modal_imagee" src={Success} />
               <SmallText
@@ -34,7 +41,7 @@ function RecordingReady() {
                 <Button
                   text="Save Video"
                   ext_btn="save_video_btn2"
-                  onClick={handleClick}
+                  onClick={closeModal}
                 />
                 <span className="creat_account_container">
                   <SmallText
@@ -70,7 +77,7 @@ function RecordingReady() {
         <Button
           text="Save Video"
           ext_btn="save_video_btn2"
-          onClick={handleClick}
+          onClick={openModal}
         />
         <span className="creat_account_container">
           <SmallText
