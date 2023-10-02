@@ -198,7 +198,9 @@ a:-webkit-any-link {
   padding: 0 72px;
 }
 
-.video_main_text {
+.video_main_text,
+.repository_header_text {
+  margin: 0;
   font-weight: 600;
   font-size: 24px;
 }
@@ -395,4 +397,52 @@ a:-webkit-any-link {
   padding: 3px;
   background-color: #cacaca;
   margin: 5px;
+}
+.repository_header {
+  display: flex;
+  justify-content: space-between;
+}
+.profile_container {
+  display: flex;
+  gap: 8px;
+  width: 15%;
+}
+.repository_content_text {
+  display: flex;
+  justify-content: space-between;
+}
+.repository_body_text {
+  color: #616163;
+  font-family: "Work Sans";
+}
+.repository_search {
+  padding: 12px 32px;
+  background: url(assets/search-normal.svg) no-repeat 2% center;
+}
+.repository_container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 72px;
+}
+.arrow,
+.profile {
+  width: 25px;
+  height: 25px;
+}
+.single_send_container {
+  display: flex;
+  justify-content: space-between;
+}
+.send_btn2 {
+  position: absolute;
+  width: 90px;
+  right: 0%;
+  height: 6vh;
+  border-radius: 8px;
+  border: 1px solid #616163;
+}
+.copy_container {
+  display: flex;
+  position: relative;
 }
