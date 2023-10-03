@@ -405,7 +405,7 @@ a:-webkit-any-link {
 .profile_container {
   display: flex;
   gap: 8px;
-  width: 15%;
+  width: 16%;
 }
 .repository_content_text {
   display: flex;
